@@ -70,5 +70,5 @@ elif cabin_letter == "T":
 
 
 features = np.array([Age,SibSp,Parch,Fare,Pclass_2,Pclass_3,Sex_male,Embarked_Q,Embarked_S,Cabinletter_B,Cabinletter_C,Cabinletter_D,Cabinletter_E,Cabinletter_F,Cabinletter_G,Cabinletter_T])
-survival_prob = round(rf.predict_proba(features.reshape(1,16))[0][1]*100,2)
+survival_prob = round(rf.predict_proba(features.reshape(1,-1))[0][1]*100,2)
 st.subheader("{} %".format(survival_prob))
