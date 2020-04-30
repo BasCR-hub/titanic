@@ -27,11 +27,11 @@ st.title("Titanic : likelihood of survival")
 
 gender = st.sidebar.radio("Passenger gender",('Male', 'Female'))
 Fare = st.sidebar.slider('Fare',df.Fare.min(),df.Fare.max())
+travel_class = st.sidebar.radio("Travel class",('1st', '2nd','3rd'))
 Age = st.sidebar.slider('Age', 0, 100, 25)
 
 SibSp = st.sidebar.slider('Siblings',df.SibSp.min(),df.SibSp.max(),step=1.0)
 Parch = st.sidebar.slider('Parch',df.Parch.min(),df.Parch.max(),step=1.0)
-travel_class = st.sidebar.radio("Travel class",('1st', '2nd','3rd'))
 embarked_at = st.sidebar.radio("Embarked at",('Cherbourg', 'Southampton','Queenstown'))
 cabin_letter = st.sidebar.radio("Cabin Letter",('B', 'C','D','E','F','G','T','No information'))
 
